@@ -357,6 +357,10 @@ MonoBehaviour:
   Speed: 10
   xRange: 5
   yRange: 2.7
+  positionPitchFactor: -5
+  controlPitchFactor: -20
+  positionYawFactor: 5
+  controlRollFactor: -20
 --- !u!4 &244096224 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4990735726000770, guid: cb91e17b5fc6cd8418f327037f696a81,
@@ -424,7 +428,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 45
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -661,27 +665,27 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4990735726000770, guid: cb91e17b5fc6cd8418f327037f696a81, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: 4990735726000770, guid: cb91e17b5fc6cd8418f327037f696a81, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -0.99
       objectReference: {fileID: 0}
     - target: {fileID: 4990735726000770, guid: cb91e17b5fc6cd8418f327037f696a81, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 7
+      value: 8.63
       objectReference: {fileID: 0}
     - target: {fileID: 4990735726000770, guid: cb91e17b5fc6cd8418f327037f696a81, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4990735726000770, guid: cb91e17b5fc6cd8418f327037f696a81, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4990735726000770, guid: cb91e17b5fc6cd8418f327037f696a81, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4990735726000770, guid: cb91e17b5fc6cd8418f327037f696a81, type: 2}
       propertyPath: m_LocalRotation.w
@@ -693,6 +697,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4990735726000770, guid: cb91e17b5fc6cd8418f327037f696a81, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990735726000770, guid: cb91e17b5fc6cd8418f327037f696a81, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990735726000770, guid: cb91e17b5fc6cd8418f327037f696a81, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

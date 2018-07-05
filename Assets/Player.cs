@@ -20,10 +20,15 @@ public class Player : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        PlayerShipControls();
+        ProcessTranslation();
+        ProcessRotation();
     }
 
-    private void PlayerShipControls()
+    private void ProcessRotation()
+    {
+        transform.localRotation = Quaternion.Euler(-30f, 30f, 0f);
+    }
+    private void ProcessTranslation()
     {
         float xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
         float yThrow = CrossPlatformInputManager.GetAxis("Vertical");

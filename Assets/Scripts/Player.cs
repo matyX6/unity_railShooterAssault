@@ -31,7 +31,12 @@ public class Player : MonoBehaviour
         ProcessRotation();
     }
 
-    private void ProcessRotation()
+    void OnTriggerEnter(Collider other)
+    {
+        print("Player triggered something!");
+    }
+
+        private void ProcessRotation()
     {
         float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
         float controlDueToPosition = yThrow * controlPitchFactor;

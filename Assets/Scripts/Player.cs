@@ -57,7 +57,6 @@ public class Player : MonoBehaviour
         float clampedXPosition = Mathf.Clamp(rawXPosition, -xRange, xRange);
         float clampedYPosition = Mathf.Clamp(rawYPosition, -yRange, yRange);
 
-        transform.localPosition = new Vector3(clampedXPosition, transform.localPosition.y, transform.localPosition.z);
-        transform.localPosition = new Vector3(transform.localPosition.x, clampedYPosition, transform.localPosition.z);
+        transform.localPosition = new Vector3(clampedXPosition, clampedYPosition, transform.localPosition.z);
     }
 }

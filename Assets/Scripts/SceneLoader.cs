@@ -3,17 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MusicPlayer : MonoBehaviour
-{
+public class SceneLoader : MonoBehaviour {
 
-    private void Awake()
+    void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        Invoke("LoadNextLevel", 3f);
     }
-    void Start ()
-    {
-        Invoke("LoadNextLevel", 3f);	
-	}
 
     void LoadNextLevel()
     {

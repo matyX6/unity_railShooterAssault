@@ -306,22 +306,6 @@ MonoBehaviour:
     - {fileID: 810541929}
   smoothRoute: 1
   editorVisualisationSubsteps: 100
---- !u!1 &244096221 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1786811025375224, guid: cb91e17b5fc6cd8418f327037f696a81,
-    type: 2}
-  m_PrefabInternal: {fileID: 2021966687}
---- !u!114 &244096222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 244096221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3851d1622393e749b46595b3fb8e991, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &244096224 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4990735726000770, guid: cb91e17b5fc6cd8418f327037f696a81,
@@ -1092,34 +1076,28 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114371330521222686, guid: cb91e17b5fc6cd8418f327037f696a81,
+    - target: {fileID: 82691902181810936, guid: cb91e17b5fc6cd8418f327037f696a81,
         type: 2}
-      propertyPath: controlSpeed
-      value: 20
+      propertyPath: m_Volume
+      value: 0.25
       objectReference: {fileID: 0}
-    - target: {fileID: 114371330521222686, guid: cb91e17b5fc6cd8418f327037f696a81,
+    - target: {fileID: 1816278926600866, guid: cb91e17b5fc6cd8418f327037f696a81, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114221454972608774, guid: cb91e17b5fc6cd8418f327037f696a81,
         type: 2}
-      propertyPath: xRange
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114371330521222686, guid: cb91e17b5fc6cd8418f327037f696a81,
-        type: 2}
-      propertyPath: yRange
-      value: 4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114371330521222686, guid: cb91e17b5fc6cd8418f327037f696a81,
-        type: 2}
-      propertyPath: positionYawFactor
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114371330521222686, guid: cb91e17b5fc6cd8418f327037f696a81,
-        type: 2}
-      propertyPath: controlRollFactor
-      value: -30
-      objectReference: {fileID: 0}
+      propertyPath: deathFX
+      value: 
+      objectReference: {fileID: 2033016322}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb91e17b5fc6cd8418f327037f696a81, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2033016322 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1816278926600866, guid: cb91e17b5fc6cd8418f327037f696a81,
+    type: 2}
+  m_PrefabInternal: {fileID: 2021966687}
 --- !u!4 &2142458825 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4990607877152018, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd,

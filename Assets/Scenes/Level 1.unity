@@ -257,7 +257,7 @@ GameObject:
   - component: {fileID: 214330486}
   - component: {fileID: 214330488}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Score Board
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -331,7 +331,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329d7f6a48b2e264cbe96a415f8a95b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scorePerHit: 12
 --- !u!1 &224079724
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,6 +457,11 @@ Prefab:
       propertyPath: parent
       value: 
       objectReference: {fileID: 1321777981}
+    - target: {fileID: 114282757594705226, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd,
+        type: 2}
+      propertyPath: scorePerHit
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 0}
@@ -767,10 +771,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -934,6 +938,11 @@ Prefab:
       propertyPath: parent
       value: 
       objectReference: {fileID: 1321777981}
+    - target: {fileID: 114282757594705226, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd,
+        type: 2}
+      propertyPath: scorePerHit
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd, type: 2}
@@ -1128,6 +1137,11 @@ Prefab:
       propertyPath: parent
       value: 
       objectReference: {fileID: 1321777981}
+    - target: {fileID: 114779917979789062, guid: bb7599871142bcd41bace4e2b151829a,
+        type: 2}
+      propertyPath: scorePerHit
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb7599871142bcd41bace4e2b151829a, type: 2}
   m_IsPrefabParent: 0
@@ -1343,6 +1357,11 @@ Prefab:
     - target: {fileID: 1074994750746910, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd, type: 2}
       propertyPath: m_Name
       value: Ship_03 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114282757594705226, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd,
+        type: 2}
+      propertyPath: scorePerHit
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}

@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour {
 
+    [Tooltip("In seconds")][SerializeField] float loadDelay = 2f;
+
     void Start()
     {
-        Invoke("LoadNextScene", 3f);
+        Invoke("LoadNextScene", loadDelay);
     }
 
     void LoadNextScene()

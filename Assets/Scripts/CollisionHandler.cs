@@ -33,11 +33,12 @@ public class CollisionHandler : MonoBehaviour
         deathFX.SetActive(true); //activating explosion
         //gameObject.GetComponent<Renderer>().enabled = false; //make player ship invisible
         //gameObject.SetActive(false); //deactivating player object
+
     }
 
     private void ReloadScene() //string referenced
     {
         int sceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(sceneIndex);
+        SceneManager.LoadScene("Splash Screen");
     }
 }

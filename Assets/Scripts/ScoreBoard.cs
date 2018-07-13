@@ -8,16 +8,17 @@ public class ScoreBoard : MonoBehaviour {
     private int score;
     private Text scoreText;
 
-	void Start ()
+    void Start()
     {
         scoreText = GetComponent<Text>();
         scoreText.text = score.ToString();
-	}
+    }
 
     public void ScoreHit(int scoreIncrease)
     {
         score = score + scoreIncrease;
         scoreText.text = score.ToString();
+
+        GameObject.Find("HighScoreKeeper").GetComponent<HighScore>().SetHighScore(score);
     }
-	
 }

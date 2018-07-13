@@ -18,12 +18,17 @@ public class CollisionHandler : MonoBehaviour
     {
         SendMessage("OnPlayerDeath");
 
-        MakePlayerExplosde();
+        MakePlayerExplode();
+        Invoke("MakePlayerDisappear", 1f);
 
         Invoke("ReloadScene", sceneLoadDelay);
     }
 
-    private void MakePlayerExplosde()
+    private void MakePlayerDisappear()
+    {
+        gameObject.SetActive(false);
+    }
+    private void MakePlayerExplode()
     {
         deathFX.SetActive(true); //activating explosion
         //gameObject.GetComponent<Renderer>().enabled = false; //make player ship invisible

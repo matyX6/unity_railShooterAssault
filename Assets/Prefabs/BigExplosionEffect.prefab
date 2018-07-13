@@ -72,8 +72,8 @@ GameObject:
   - component: {fileID: 4000010212820824}
   - component: {fileID: 198000012777718758}
   - component: {fileID: 199000010553669322}
-  - component: {fileID: 114804401867481594}
-  - component: {fileID: 82667369731740454}
+  - component: {fileID: 82248496712297952}
+  - component: {fileID: 114609425400932122}
   m_Layer: 0
   m_Name: BigExplosionEffect
   m_TagString: Untagged
@@ -156,7 +156,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011797152326}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 319.1255, y: 397.66, z: 717.51825}
+  m_LocalPosition: {x: -14.81, y: 13.54, z: 9.64}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4000014165673988}
@@ -260,7 +260,7 @@ Transform:
   m_Father: {fileID: 4000010212820824}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82667369731740454
+--- !u!82 &82248496712297952
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -355,7 +355,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114804401867481594
+--- !u!114 &114609425400932122
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

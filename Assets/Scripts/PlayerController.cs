@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour
@@ -10,6 +11,8 @@ public class PlayerController : MonoBehaviour
     [Tooltip("In m/s")][SerializeField] float controlSpeed = 10f;
     [Tooltip("In m")] [SerializeField] float xRange = 4.5f;
     [Tooltip("In m")] [SerializeField] float yRange = 3f;
+
+    [SerializeField] GameObject blackScreenWin;
 
     [Header("Firing")]
     [SerializeField] GameObject[] guns;
@@ -25,6 +28,11 @@ public class PlayerController : MonoBehaviour
     float xThrow, yThrow;
     bool isControlEnabled = true;
 
+    private void Start()
+    {
+        Invoke("LevelCompleted", 95f);
+    }
+
     // Update is called once per frame
     void Update ()
     {
@@ -34,6 +42,17 @@ public class PlayerController : MonoBehaviour
             ProcessRotation();
             ProcessFiring();
         }
+    }
+
+    private void LevelCompleted()
+    {
+        blackScreenWin.gameObject.SetActive(true);
+        Invoke("LoadSplash", 5f);
+    }
+
+    private void LoadSplash()
+    {
+        SceneManager.LoadScene("Splash Screen");
     }
 
     private void OnPlayerDeath() //called by string reference

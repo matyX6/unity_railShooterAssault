@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33153803150432336}
   - component: {fileID: 23069720753673828}
   - component: {fileID: 136881447885336416}
+  - component: {fileID: 122225258670118750}
   m_Layer: 0
   m_Name: TimePlus
   m_TagString: timePlus
@@ -114,6 +115,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1403115830571086}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!122 &122225258670118750
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1403115830571086}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278241791
+  m_Size: 3
 --- !u!136 &136881447885336416
 CapsuleCollider:
   m_ObjectHideFlags: 1

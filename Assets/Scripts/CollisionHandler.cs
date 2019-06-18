@@ -6,15 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
-    [Tooltip("In seconds")] [SerializeField] float sceneLoadDelay = 2f;
+    [Tooltip("In seconds")] [SerializeField] float sceneLoadDelay = 4f;
     [Tooltip("FX prefab on player")] [SerializeField] GameObject deathFX;
+
+    [SerializeField] GameObject timeUp;
+    [SerializeField] GameObject youDied;
 
     void OnTriggerEnter(Collider other)
     {
-        StartDeathSequence();
+        if(other.tag != "timePlus" && other.tag != "bulletPlus")
+        {
+            StartDeathSequence(false);
+        }
     }
 
-    private void StartDeathSequence()
+    public void StartDeathSequence(bool isTimeUp)
     {
         SendMessage("OnPlayerDeath");
 
@@ -22,6 +28,15 @@ public class CollisionHandler : MonoBehaviour
         Invoke("MakePlayerDisappear", 1f);
 
         Invoke("ReloadScene", sceneLoadDelay);
+
+        if (isTimeUp)
+        {
+            timeUp.gameObject.SetActive(true);
+        }
+        else
+        {
+            youDied.gameObject.SetActive(true);
+        }
     }
 
     private void MakePlayerDisappear()

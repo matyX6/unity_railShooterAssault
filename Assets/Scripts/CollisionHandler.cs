@@ -23,6 +23,7 @@ public class CollisionHandler : MonoBehaviour
     public void StartDeathSequence(bool isTimeUp)
     {
         SendMessage("OnPlayerDeath");
+        transform.GetComponent<PlayerController>().MakeGameNotActive();
 
         MakePlayerExplode();
         Invoke("MakePlayerDisappear", 1f);

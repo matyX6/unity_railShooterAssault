@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
 
     float xThrow, yThrow;
     bool isControlEnabled = true;
+    bool isGameActive = true;
 
     private void Start()
     {
@@ -83,7 +84,7 @@ public class PlayerController : MonoBehaviour
             timeCanvas.GetComponent<Text>().text = time.ToString();
         }
 
-        if (time <= 0)
+        if (time <= 0 && isGameActive)
         {
             transform.GetComponent<CollisionHandler>().StartDeathSequence(true);
         }
@@ -105,8 +106,18 @@ public class PlayerController : MonoBehaviour
 
     private void LevelCompleted()
     {
+        MakeGameNotActive();
+
         blackScreenWin.gameObject.SetActive(true);
         Invoke("LoadSplash", 5f);
+    }
+
+    public void MakeGameNotActive()
+    {
+        isGameActive = false;
+        bulletCountCanvas.transform.parent.gameObject.SetActive(false);
+        timeCanvas.transform.parent.gameObject.SetActive(false);
+        isControlEnabled = false;
     }
 
     private void LoadSplash()

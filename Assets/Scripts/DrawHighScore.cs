@@ -8,6 +8,12 @@ public class DrawHighScore : MonoBehaviour
 
     void Start()
     {
+        DrawHighScoreOnTextcomponent();
+    }
+
+    //programski kod koji zapisuje 
+    private void DrawHighScoreOnTextcomponent()
+    {
         int scoreToDraw = GameObject.Find("HighScoreKeeper").GetComponent<HighScore>().GetHighScore();
         Text scoreText = gameObject.GetComponent<Text>();
 

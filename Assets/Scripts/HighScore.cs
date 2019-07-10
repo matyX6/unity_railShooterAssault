@@ -14,10 +14,6 @@ public class HighScore : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
-    private void Update()
-    {
-    }
-
     public void SetHighScore(int score)
     {
         if (score > highScore)

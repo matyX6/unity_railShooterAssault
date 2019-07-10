@@ -12,9 +12,13 @@ public class QuitGame : MonoBehaviour {
     }
     void Update ()
     {
-        
-        if(CrossPlatformInputManager.GetButtonDown("Exit"))
-        { 
+        HandleBackButton();
+    }
+
+    private static void HandleBackButton()
+    {
+        if (CrossPlatformInputManager.GetButtonDown("Exit"))
+        {
             if (SceneManager.GetActiveScene().name == "Splash Screen")
             {
                 Application.Quit();
@@ -24,5 +28,5 @@ public class QuitGame : MonoBehaviour {
                 SceneManager.LoadScene("Splash Screen");
             }
         }
-	}
+    }
 }

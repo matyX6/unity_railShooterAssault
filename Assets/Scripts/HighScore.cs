@@ -19,11 +19,13 @@ public class HighScore : MonoBehaviour {
         if (score > highScore)
         {
             highScore = score;
+            PlayerPrefs.SetInt("hs", score);
         }
     }
 
     public int GetHighScore()
     {
+        highScore = PlayerPrefs.GetInt("hs", 0);
         return highScore;
     }
 }
